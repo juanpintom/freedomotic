@@ -1,0 +1,29 @@
+<config>
+    <properties>
+        <property name="name" value="MySensors"/>
+        <property name="description" value="Enables communication with MySensors gateways"/>
+        <property name="category" value="protocol"/>
+        <property name="short-name" value="mysensors"/>
+        <property name="startup-time"   value="on load"/>
+        <property name="protocol.name" value="mysensors"/>       
+    </properties>
+    <tuples>
+      <!-- OBJECTS MAPPING --> 
+      <tuple>
+        <property name="object.class" value="Thermostat"/>
+        <property name="temperature" value="MySensors reads temperature"/>
+      </tuple>
+      <tuple>
+        <property name="object.class" value="Light Sensor"/>
+        <property name="luminosity" value="MySensors Grove System reads luminosity"/>
+      </tuple>
+    <!-- GATEWAYS CONFIGURATION -->
+     <tuple>
+        <property name="gateway.name" value="default"/>
+        <property name="gateway.port.name" value="/dev/ttyS80"/>
+        <property name="gateway.port.baudrate" value="9600"/>
+     </tuple>
+    </tuples>
+</config>
+
+                
